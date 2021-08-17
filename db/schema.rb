@@ -10,10 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_17_124405) do
+
+ActiveRecord::Schema.define(version: 2021_08_16_154026) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -49,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_124405) do
 
   create_table "items", force: :cascade do |t|
     t.string "size"
-    t.string "type"
+    t.string "item_type"
     t.string "color"
     t.integer "price"
     t.string "title"
@@ -58,6 +61,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_124405) do
     t.string "occasion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_items_on_user_id"
   end
@@ -75,7 +79,14 @@ ActiveRecord::Schema.define(version: 2021_08_17_124405) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+=======
+<<<<<<< HEAD
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+=======
+>>>>>>> master
+>>>>>>> master
   add_foreign_key "bookings", "items", column: "items_id"
   add_foreign_key "bookings", "users", column: "users_id"
   add_foreign_key "items", "users"
