@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_154026) do
 
   create_table "items", force: :cascade do |t|
     t.string "size"
-    t.string "type"
+    t.string "item_type"
     t.string "color"
     t.integer "price"
     t.string "title"
@@ -79,10 +79,11 @@ ActiveRecord::Schema.define(version: 2021_08_16_154026) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+=======
+>>>>>>> master
   add_foreign_key "bookings", "items", column: "items_id"
   add_foreign_key "bookings", "users", column: "users_id"
   add_foreign_key "items", "users"
-
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-
 end
