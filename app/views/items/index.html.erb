@@ -1,2 +1,14 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+  <%= render "shared/banner", item: @item %>
+
+<div class="container">
+
+  <p id="p-index">Accueil / Emprunter / A MODIFIER</p>
+  <div class="cards">
+
+    <% @items.each do |item| %>
+     <%= link_to item_path(item) do %>
+      <%= render "shared/card", item: item %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
