@@ -3,4 +3,5 @@ class Item < ApplicationRecord
   has_many :bookings
   validates :size, :type, :color, :price, :title, :occasion, :brand, :description, presence: true
   validates :title, uniqueness: true
+  has_many_attached :photos
 end
