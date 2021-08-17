@@ -44,23 +44,15 @@
 
 <% if user_signed_in? %>
 
-  <a class="avatar dropdown-toggle" href="#" id="avatarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <%= image_tag "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1533&q=80", class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-  </a>
-  <div class="dropdown-menu dropdown-menu-lg-right dropdown" aria-labelledby="navbarDropdownMenuLink-saju">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+  <li class="nav-item dropdown">
+  <p style="display: contents; color: #F2A3A0;">Bienvenue !</p> <p style="display: contents; color: white;">....</p>
+  <%= image_tag "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1533&q=80", class: "avatar", id: "navbarDropdown2", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+  <div class="dropdown-menu dropdown-menu-lg-right dropdown" style="margin-top: 6px ;" aria-labelledby="navbarDropdownMenuLink-saju">
+          <a class="dropdown-item" href="#">Mes Demandes</a>
+          <a class="dropdown-item" href="#">Mes Locations</a>
+          <a class="dropdown-item" href="#">Mon Dressing</a>
         </div>
-
-  <%# <li class="avatar dropdown">
-    <%= image_tag "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1533&q=80", class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-      <%= link_to "Mes demandes", "#", class: "dropdown-item" %>
-      <%# <%= link_to "Mes locations", "#", class: "dropdown-item" %>
-      <%# <%= link_to "Mon dressing", "#", class: "dropdown-item" %>
-    <%# </div> %>
-  <%# </li> %>
+  </li>
 
 <% else %>
   <div class="buttons" style="display: flex;">
