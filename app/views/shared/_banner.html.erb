@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJlc3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="container">
+     <h1 id="banner-title">La Bonne Tenue</h1>
+    <p>Trouvez de superbes tenues à louer</p>
+    <div class="search-form">
+      <div class="fields">
+      <%= simple_form_for :search do |f| %>
+        <%= f.input :date, placeholder: "date", label: false %>
+        <%= f.input :size, placeholder: "taille", label: false %>
+        <%= f.input :type, placeholder: "type de vêtement", label: false %>
+      </div>
+        <%= f.submit 'Rechercher', class: "pink-button" %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
