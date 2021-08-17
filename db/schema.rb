@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_16_152033) do
+ActiveRecord::Schema.define(version: 2021_08_16_154026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "users_id", null: false
+    t.bigint "items_id", null: false
+    t.date "beginning_date"
+    t.date "ending_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["items_id"], name: "index_bookings_on_items_id"
+    t.index ["users_id"], name: "index_bookings_on_users_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "size"
+    t.string "type"
+    t.string "color"
+    t.integer "price"
+    t.string "title"
+    t.string "description"
+    t.string "brand"
+    t.string "occasion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +52,6 @@ ActiveRecord::Schema.define(version: 2021_08_16_152033) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "items", column: "items_id"
+  add_foreign_key "bookings", "users", column: "users_id"
 end
