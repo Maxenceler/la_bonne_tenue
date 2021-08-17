@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @items = Item.all
+    @items = Item.where(params[:query] == params)
   end
 
   def show
@@ -10,9 +10,16 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
   def new
+    @item = Item.new
   end
 
   def create
+    @item = Item.new(items_params)
+    if @item.save!
+      redirect_to item_path(@item)
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -22,5 +29,11 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
   def update
+  end
+
+  private
+
+  def items_params
+    params.require(:item).permit(:title, :size, :color, :price, :occasion, :brand, :description, :photos) ## :type
   end
 end
