@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 2021_08_17_135606) do
     t.string "occasion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,7 +75,11 @@ ActiveRecord::Schema.define(version: 2021_08_17_135606) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+
   add_foreign_key "bookings", "items", column: "items_id"
   add_foreign_key "bookings", "users", column: "users_id"
+  add_foreign_key "items", "users"
+
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+
 end
