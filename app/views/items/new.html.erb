@@ -16,7 +16,7 @@
     <div class="align-two-fields">
       <%= f.input :occasion, collection: ["Occasion", "Grand Événement", "Sport", "Casual", "Soirée"], default: "Grand Événement", label: false %>
       <%= f.input :item_type, collection: ["Type", "Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :photos, as: :file %>
     </div>
     <div class="align-center-flex">
       <%= f.submit 'Louer ce Vêtement', class: "submit-outfit" %>
