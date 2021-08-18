@@ -17,7 +17,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @item = Item.find(params[:id])
     authorize @item
 
-     @booking = Booking.new
+    @booking = Booking.new
     authorize @booking
   end
 
