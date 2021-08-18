@@ -2,15 +2,16 @@
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="container">
      <h1 id="banner-title">La Bonne Tenue</h1>
-    <p>Trouvez de superbes tenues à louer</p>
+    <p class="font-family: 'Montserrat', sans-serif;">Trouvez de superbes tenues à louer</p>
     <div class="search-form">
       <div class="fields">
       <%= simple_form_for :search do |f| %>
-        <%= f.input :date, placeholder: "date", label: false %>
-        <%= f.input :size, placeholder: "taille", label: false %>
-        <%= f.input :type, placeholder: "type de vêtement", label: false %>
+        <%= f.input :date, placeholder: "Date", label: false %>
+        <%= f.input :size, placeholder: "Taille", label: false %>
+        <%= f.input :type, placeholder: "Type de Vêtements", label: false %>
       </div>
-        <%= f.submit 'Rechercher', class: "pink-button" %>
+        <%# <%= f.submit 'Rechercher', class: "pink-button" %> %>
+        <%= link_to 'Rechercher', items_path, class: 'pink-button' %>
       <% end %>
     </div>
     <% end %>
