@@ -11,75 +11,35 @@
     </div>
 
     <div class="ficheProduit">
-	   <h1 class="nom-produit"> <%= @item.title%> </h1>
+	    <h1 class="nom-produit"> <%= @item.title%> </h1>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="image-preview">
-          <%= cl_image_tag @item.photos.first.key, crop: :fill %>
+      <div class="d-flex">
+        <div class="d-flex flex-column ">
+          <%= cl_image_tag @item.photos.last.key, height: 250, crop: :fill %>
+          <%= cl_image_tag @item.photos.second.key, height: 250, crop: :fill %>
+          <%= cl_image_tag @item.photos.third.key, height: 250, crop: :fill %>
+        </div>
+          <%= cl_image_tag @item.photos.first.key, crop: :fill, height: 630 %>
+
+
+      <div class="d-flex flex-column"></div>
+        <div class="infos-produit">
+          <div class="blocBeigeProduit bloc-info-produit" style="height: 48px; min-height: 62px;">
+            <%= @item.size%>
           </div>
+
+          <div class="prix bloc-info-produit" style="min-height: 62px;">
+            <p><%= @item.price%>€</p>
+          </div>
+
+          <div id="addBasket">
+            <%= simple_form_for [ @item, @booking ] do |f| %>
+            <%= f.submit “Louer”, class: “pink-button” %>
+            <% end %>
           </div>
         </div>
+
       </div>
     </div>
-
-    <div class="infos-produit">
-      <div class="blocBeigeProduit bloc-info-produit" style="height: 48px; min-height: 62px;">
-        <nav id="size-nav">
-          <div class="dropdown">
-            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <b style="font-size: 15px">Taille </b> 36 / 38
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu menu-size" aria-labelledby="dLabel">
-              <li><a data-toggle="modal" data-target="#modalUnavailableProduct" data-href="/shopping/basket/unavailableSizeAlert/4145" href="/shopping/basket/unavailableSizeAlert/4145">
-                Le modèle n'est pas disponible dans ma taille ?</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      <div class="prix bloc-info-produit" style="min-height: 62px;">
-        <p><span class="flap-prix">45.00€</span>
-            <span class="prix-neuf">(Prix neuf : 250€)</span>
-        </p>
-      </div>
-      <p class="caution">caution : 250.00€(non encaissée)</p>
-
-      <div id="addBasket">
-        <ul>
-        <%=link_to "Louer", bookings_path, class: "pink-button" %>
-         <li><span><span>Un doute sur la taille ?</span><a class="link-click_guideTailles" data-name="Robe midi beige fleurs argentées KATTE IRO à louer" data-toggle="modal" data-target="#myModalSize">Cliquez ici</a></span></li>
-         <li><a data-toggle="modal" data-target="#modalFitting">Essayer</a></li>
-        </ul>
-      </div>
-
-      <div class="liste-icones">
-        <div class="row">
-          <div class="col-md-4 col-xs-4">
-            <div class="icone">
-              <div class="image"><img style="width: 42px;" src="/assets/front/icone-cintre.svg?v30" alt="Pressing offert">
-              </div>
-                <p>Pressing offert</p>
-            </div>
-          </div>
-        <div class="col-md-4 col-xs-4">
-          <div class="icone">
-            <div class="image">
-              <img style="width: 36px;" src="/assets/front/icone-timbre.svg?v30" alt="Transport offert">
-            </div>
-            <p>Transport <br>aller-retour offert (sauf le samedi) </p>
-          </div>
-        </div>
-          <div class="col-md-4 col-xs-4">
-            <div class="icone">
-              <div class="image"><img style="width: 23px;" src="/assets/front/icone-euro.svg?v30" alt="Tenues non portées remboursées">
-              </div><p>Tenues non portées remboursées <br><small>*Hors accessoires</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
   </div>
 </div>
