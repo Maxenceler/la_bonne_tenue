@@ -4,6 +4,9 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @items = policy_scope(Item)
     @items = Item.all
+    if params[:last].present?
+      @items = Item.all.order("created_at desc").limit(3)
+    end
   end
 
   def filtered_index
