@@ -19,7 +19,6 @@
           <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Tops & Blouses</a>
           <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Pantalons & Jeans</a>
           <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Jupes & Shorts</a>
-          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Sacs & Accessoires</a>
         </div>
       </li>
@@ -46,20 +45,21 @@
 
   <li class="nav-item dropdown">
   <p style="display: contents; color: #F2A3A0; font-family: 'Montserrat', sans-serif; ">Bienvenue !</p> <p style="display: contents; color: white;">....</p>
-  <%= image_tag "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1533&q=80", class: "avatar", id: "navbarDropdown2", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+  <%= cl_image_tag current_user.photo.key, class: "avatar", id: "navbarDropdown2", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
   <div class="dropdown-menu dropdown-menu-lg-right dropdown" style="margin-top: 6px ;" aria-labelledby="navbarDropdownMenuLink-saju">
-          <a class="dropdown-item" href="#">Mes Demandes</a>
-          <a class="dropdown-item" href="#">Mes Locations</a>
-          <a class="dropdown-item" href="#">Mon Dressing</a>
+          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mes Demandes</a>
+          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mes Locations</a>
+          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mon Dressing</a>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Nouveau Vêtement', new_item_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Me Déconnecter', destroy_user_session_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
         </div>
   </li>
 
 <% else %>
   <div class="buttons" style="display: flex;">
     <%= link_to 'Login', new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0 maclass", style:"width: 100px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"%>
-    <%# <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="width: 100px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Login</button> %>
     <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-success my-2 my-sm-0 text-white", style:"width: 100px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"%>
-    <%# <button class="btn btn-success my-2 my-sm-0 text-white" type="submit" style="width: 100px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">Sign up</button> %>
   </div>
 <% end  %>
 </div>
