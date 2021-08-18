@@ -21,36 +21,13 @@
         </div>
           <%= cl_image_tag @item.photos.first.key, crop: :fill, height: 630 %>
 
-<<<<<<< HEAD
-=======
-      <div id="addBasket">
-        <ul>
-         <%# <%=link_to "Louer", bookings_path, class: "pink-button" %> %>
-
-
-         <li><span><span>Un doute sur la taille ?</span><a class="link-click_guideTailles" data-name="Robe midi beige fleurs argentées KATTE IRO à louer" data-toggle="modal" data-target="#myModalSize">Cliquez ici</a></span></li>
-         <li><a data-toggle="modal" data-target="#modalFitting">Essayer</a></li>
-        </ul>
-      </div>
->>>>>>> fb84e5d9485e2c72b6cdee5376374686e4c028e7
-
-      <div class="d-flex flex-column"></div>
-        <div class="infos-produit">
-          <div class="blocBeigeProduit bloc-info-produit" style="height: 48px; min-height: 62px;">
-            <%= @item.size%>
-          </div>
-
-          <div class="prix bloc-info-produit" style="min-height: 62px;">
-            <p><%= @item.price%>€</p>
-          </div>
-
-          <div id="addBasket">
-            <%= simple_form_for [ @item, @booking ] do |f| %>
-            <%= f.submit “Louer”, class: “pink-button” %>
-            <% end %>
-          </div>
+        <div class="d-flex flex-column width: 810px" style="text-align: center; margin-left: 85px;">
+              <p><%= @item.size%></p>
+              <p><%= @item.price%>€</p>
+              <%= simple_form_for [ @item, @booking ] do |f| %>
+              <%= f.submit 'Louer', class: 'pink-button', style: "width: 100px;"%>
+              <% end %>
         </div>
-
       </div>
     </div>
   </div>
