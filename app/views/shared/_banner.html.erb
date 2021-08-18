@@ -7,12 +7,17 @@
       <div class="fields">
       <%= simple_form_for :search do |f| %>
         <%= f.input :date, placeholder: "date", label: false %>
-        <%= f.input :size, placeholder: "taille", label: false %>
-        <%= f.input :type, placeholder: "type de vêtement", label: false %>
+        <%= f.input :size, collection: ["34", "36", "38", "40", "42", "44", "46"], default: "34", label: false %>
+        <%= f.input :type, collection: ["Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
       </div>
+      <div class="flex-button">
         <%= f.submit 'Rechercher', class: "pink-button" %>
+        </div>
       <% end %>
     </div>
     <% end %>
+
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,47 @@
+.submit-outfit {
+  background-color: pink;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 12px;
+  width: 100%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
+.form-margin-top {
+  margin-top: 40px;
+}
+
+.align-two-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.submit-outfit:hover {
+  background-color: #F6A9A9;
+  box-shadow: 1px 1px 1px pink;
+}
+
+.tout-voir {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.tout-voir:hover {
+  background-color: #F6A9A9;
+  box-shadow: 1px 1px 1px pink;
+  text-decoration: none;
+}
+
+.see-all {
+   text-align: center;
+
+}
