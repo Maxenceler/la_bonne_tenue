@@ -24,14 +24,17 @@
 
 .pink-button {
   padding: 8px 4px;
-  background-color: pink;
+  background-color: #F2A3A0;
   border-radius: 4px;
   border: none;
   width: 20%;
-  margin-left: 40%;
   margin-top: 24px;
 }
 
+.pink-button:hover {
+  background-color: #F6A9A9;
+  box-shadow: 1px 1px 1px pink;
+}
 
 
 #banner-title {
@@ -53,4 +56,10 @@
 #p-index {
   padding-top: 16px;
   margin-bottom: 32px;
+}
+
+
+.flex-button {
+  display: flex;
+  justify-content: center;
 }
