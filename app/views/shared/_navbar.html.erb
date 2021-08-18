@@ -14,29 +14,29 @@
           Produits
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 16px ;">
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Robes</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Manteaux & Vestes</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Tops & Blouses</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Pantalons & Jeans</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Jupes & Shorts</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Sacs & Accessoires</a>
+          <%= link_to 'Robes', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Manteaux & Vestes', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Tops & Blouses', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Pantalons & Jeans', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Jupes & Shorts', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Sacs & Accessoires', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
         </div>
       </li>
 
       <li class="nav-item2 mr-2">
-        <a class="nav-link" href="#">Emprunter</a>
+        <%= link_to 'Emprunter', items_path, class: "nav-link"%>
       </li>
 
       <li class="nav-item2 mr-2">
-        <a class="nav-link" href="#">Déposer</a>
+        <%= link_to 'Déposer', new_item_path, class: "nav-link"%>
       </li>
 
-      <li class="nav-item2 mr-2">
+      <%# <li class="nav-item2 mr-2">
         <a class="nav-link" href="#">Promotions</a>
-      </li>
+      </li> %>
 
       <li class="nav-item2">
-        <a class="nav-link" href="#">Nouveautés</a>
+        <%= link_to 'Nouveautés', items_path, class: "nav-link"%>
       </li>
     </ul>
   </div>
