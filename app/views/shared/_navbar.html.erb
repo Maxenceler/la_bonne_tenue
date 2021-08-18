@@ -1,6 +1,6 @@
 <div class="navbar fixed-top navbar-expand-lg navbar-light navbar-lewagon px-3 pl-5 pr-5" style="box-shadow: 5px 1px 10px grey;">
 
-  <a class="navbar-brand" href="#">La Bonne Tenue</a>
+  <%= link_to 'La Bonne Tenue', root_path, class: "navbar-brand"%>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@
           <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mon Dressing</a>
           <div class="dropdown-divider"></div>
           <%= link_to 'Nouveau Vêtement', new_item_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
-          <%= link_to 'Me Déconnecter', destroy_user_session_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Me Déconnecter', destroy_user_session_path, method: :delete, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
         </div>
   </li>
 
