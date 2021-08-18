@@ -7,3 +7,16 @@
 <p><%= @item.type %></p>
 <p><%= @item.color %></p>
 <p><%= @item.occasion %></p>
+
+<div id="main">
+  <div class="container">
+    <div class="typoFine">
+      <ol class="breadcrumb">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/produits/">Produits</a></li>
+        <li><a href="/produits/robes/">Robes</a></li>
+        <li><%= @item.title @item.brand%></li>
+      </ol>
+    </div>
+  </div>
+</div>
