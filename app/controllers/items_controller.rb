@@ -4,9 +4,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @items = policy_scope(Item)
     @items = Item.all
-    if params[:last].present?
-      @items = Item.all.order("created_at desc").limit(3)
-    end
   end
 
   def filtered_index
@@ -16,9 +13,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def show
     @item = Item.find(params[:id])
     authorize @item
-
-     @booking = Booking.new
-    authorize @booking
+    @booking = Booking.new
   end
 
   def new
@@ -31,7 +26,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @item.user = current_user
     authorize @item
 
-    if @item.save
+    if @item.save!
       redirect_to item_path(@item)
     else
       render :new
