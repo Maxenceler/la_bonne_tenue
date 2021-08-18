@@ -8,8 +8,8 @@
       <%= simple_form_for :search do |f| %>
 
         <%= f.input :date, placeholder: "Date", label: false %>
-        <%= f.input :size, collection: ["34", "36", "38", "40", "42", "44", "46"], default: "34", label: false %>
-        <%= f.input :type, collection: ["Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
+        <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "34", label: false %>
+        <%= f.input :type, collection: ["Type", "Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
       </div>
 
       <div class="flex-button">
