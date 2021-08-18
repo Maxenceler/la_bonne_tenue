@@ -1,0 +1,67 @@
+#mainpageproduct {
+    padding: 30px 50px 0 0;
+}
+
+.containerproduct {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.typoFine {
+    font-family: "Raleway",sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.breadcrumb {
+    margin: 0 0 20px 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+.ficheProduit {
+    position: relative;
+    margin: 0px 0px 50px;
+}
+
+.ficheProduit .nom-produit {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 210px 30px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.ficheProduit .carousel-content {
+    position: relative;
+}
+
+.pink-button {
+  padding: 8px 4px;
+  background-color: #F2A3A0;
+  border-radius: 4px;
+  border: none;
+  width: 20%;
+  margin-top: 24px;
+}
+
+.pink-button:hover {
+  background-color: #F6A9A9;
+  box-shadow: 1px 1px 1px pink;
+}
