@@ -13,6 +13,9 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def show
     @item = Item.find(params[:id])
     authorize @item
+
+     @booking = Booking.new
+    authorize @booking
   end
 
   def new
@@ -25,7 +28,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @item.user = current_user
     authorize @item
 
-    if @item.save!
+    if @item.save
       redirect_to item_path(@item)
     else
       render :new
