@@ -2,19 +2,23 @@
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="container">
      <h1 id="banner-title">La Bonne Tenue</h1>
-    <p>Trouvez de superbes tenues à louer</p>
+    <p class="font-family: 'Montserrat', sans-serif;">Trouvez de superbes tenues à louer</p>
     <div class="search-form">
       <div class="fields">
       <%= simple_form_for :search do |f| %>
-        <%= f.input :date, placeholder: "date", label: false %>
+
+        <%= f.input :date, placeholder: "Date", label: false %>
         <%= f.input :size, collection: ["34", "36", "38", "40", "42", "44", "46"], default: "34", label: false %>
         <%= f.input :type, collection: ["Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
       </div>
+        
       <div class="flex-button">
-        <%= f.submit 'Rechercher', class: "pink-button" %>
-        </div>
+        <%= link_to 'Rechercher', items_path, class: 'pink-button' %>
+       </div>
+      
       <% end %>
     </div>
+    
     <% end %>
 
       </div>
