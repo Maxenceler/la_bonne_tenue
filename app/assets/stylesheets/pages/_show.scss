@@ -48,6 +48,10 @@
     padding-left: 15px;
 }
 
+.portfolioThumbs {
+    font-size: 0;
+}
+
 .ficheProduit .carousel-content {
     position: relative;
 }
@@ -64,4 +68,9 @@
 .pink-button:hover {
   background-color: #F6A9A9;
   box-shadow: 1px 1px 1px pink;
+}
+
+.ficheProduit .infos-produit {
+    font-size: 0;
+    margin: 0 60px;
 }
