@@ -2,7 +2,9 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = policy_scope(Booking)
-    @bookings = Booking.where(params[:user] == current_user)
+    @bookings = Booking.where(user: current_user)
+
+    @items = Item.where(user: current_user)
   end
 
   def show
