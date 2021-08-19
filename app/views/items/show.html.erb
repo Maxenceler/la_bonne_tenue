@@ -3,9 +3,9 @@
 
     <div class="typoFine">
 	    <ol class="breadcrumb">
-            <li><a href="/">Accueil</a></li>
-             <li><a href="/produits/"> Produits </a></li>
-             <li><a href="/produits/robes/"> Robes </a></li>
+            <li><a href="/">Accueil /</a></li>
+             <li><a href="/produits/"> Produits / </a></li>
+             <li><a href="/produits/robes/"> Robes /  </a></li>
              <li><p><%= @item.title%></p></li>
       </ol>
     </div>
@@ -15,15 +15,18 @@
 
       <div class="d-flex">
         <div class="d-flex flex-column ">
-          <%# <%= cl_image_tag @item.photos.last.key, height: 250, crop: :fill %>
-          <%# <%= cl_image_tag @item.photos.second.key, height: 250, crop: :fill %>
-          <%# <%= cl_image_tag @item.photos.third.key, height: 250, crop: :fill %>
+          <%= cl_image_tag @item.photos.last.key, height: 250, crop: :fill %>
+          <%= cl_image_tag @item.photos.second.key, height: 250, crop: :fill %>
+          <%= cl_image_tag @item.photos.third.key, height: 250, crop: :fill %>
         </div>
           <%= cl_image_tag @item.photos.first.key, crop: :fill, height: 630 %>
         <div class="d-flex flex-column width: 810px" style="text-align: center; margin-left: 85px;">
               <p><%= @item.size%></p>
               <p><%= @item.price%>€</p>
+
+              <%# CALENDAR%>
               <%= simple_form_for [ @item, @booking ] do |f| %>
+              <%= f.input :beginning_date, as: :string, required: false, label: false, input_html: {class: "datepicker",id: "startdate"} %>
               <%= f.submit 'Louer', class: 'pink-button', style: "width: 100px;"%>
               <% end %>
         </div>
