@@ -24,7 +24,11 @@
         <div class="d-flex flex-column width: 810px" style="text-align: center; margin-left: 85px;">
               <p><%= @item.size%></p>
               <p><%= @item.price%>€</p>
+
+              <%# CALENDAR%>
               <%= simple_form_for [ @item, @booking ] do |f| %>
+              <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= f.submit 'Louer', class: 'pink-button', style: "width: 100px;"%>
               <% end %>
         </div>
