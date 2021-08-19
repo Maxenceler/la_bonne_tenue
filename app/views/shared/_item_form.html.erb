@@ -1,8 +1,5 @@
-<h1 class="text-align-center title-margin-top">Prête à louer votre vêtement ?</h1>
-<p class="text-align-center p-margin">Mettez à louer vos plus beaux vêtements pour arrondir vos fins de mois avec La Bonne Tenue</p>
-
 <div class="container form-margin-top">
-  <%= simple_form_for @item do |f| %>
+  <%= simple_form_for(item) do |f| %>
     <%= f.input :title, label: false, placeholder: "Titre" %>
     <div class="align-two-fields">
       <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "34", label: false, placeholder: "Taille" %>
@@ -15,9 +12,8 @@
     <%= f.input :description, label: false, placeholder: "Description" %>
     <div class="align-two-fields">
       <%= f.input :occasion, collection: ["Occasion", "Grand Événement", "Sport", "Casual", "Soirée"], default: "Grand Événement", label: false %>
-      <%= f.input :item_type, collection: [["Type", ""], ["Robes", "robe"], ["Manteaux & Vestes", "mv"], ["Tops & Blouses", "tb"], ["Pantalons & Jeans", "pj"], ["Jupes & Shorts", "js"], ["Sacs & Accessoires", "sa"]], default: "Robes", label: false %>
-      <%= f.input :main_photo, as: :file %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :item_type, collection: ["Type", "Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
+      <%= f.input :photos, as: :file %>
     </div>
     <div class="align-center-flex">
       <%= f.submit 'Louer ce Vêtement', class: "submit-outfit" %>
