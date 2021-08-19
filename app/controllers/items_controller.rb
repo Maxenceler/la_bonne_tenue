@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @items = policy_scope(Item)
@@ -7,12 +7,13 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
   def filtered_index
-     @items = Item.where(params[:query] == params)
+    @items = Item.where(params[:query] == params)
   end
 
   def show
     @item = Item.find(params[:id])
     authorize @item
+
     @booking = Booking.new
   end
 
