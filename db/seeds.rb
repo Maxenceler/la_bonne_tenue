@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "open-uri"
+Booking.destroy_all
 Item.destroy_all
 User.destroy_all
 
@@ -45,6 +46,12 @@ file14 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fic
 file15 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/PCVR17-129bis/PCVR17-129bis-3.jpg')
 file16 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/PCVR17-129bis/PCVR17-129bis-4.jpg')
 
+file17 = URI.open('https://cdn2.easy-clothes.com/37236-thickbox_default/robe-longue-bali-noire-129.jpg')
+file18 = URI.open('https://cdn3.easy-clothes.com/37225-thickbox_default/robe-longue-bali-noire-129.jpg')
+file19 = URI.open('https://cdn1.easy-clothes.com/37228-thickbox_default/robe-longue-bali-noire-129.jpg')
+file20 = URI.open('https://cdn3.easy-clothes.com/37231-thickbox_default/robe-longue-bali-noire-129.jpg')
+
+
 item1 = Item.new(title: "robe en dentelle bicolore Sandro", size: "36", item_type: "robe", color: "noir", price: 50, description: "Robe noire et blanche Sandro. Tout en dentelle et empiècement laissant entrevoir la peau en transparence à la carrure, manches courtes, col cravate à nouer ou à laisser lâche. Fermeture par un zip métal doré milieu dos.
 Occasions conseillées : Au travail, Cérémonie, Soirée / Fête Couleur : noir, blanc",
 brand: "Sandro", occasion: "Travail")
@@ -73,6 +80,12 @@ brand: "Reiko", occasion: "Travail")
 item4.user = user1
 item4.save
 
+item5 = Item.create(title: "Robe longue Bali noire",
+size: "38", item_type: "Robe", color: "Noire", price: 30, description: "Bretelles fines, décolleté cache-coeur, élastique en-dessous de la poitrine, effet soie, décolleté dans le dos",
+brand: "Stella & Suzie", occasion: "Casual")
+item5.user = user2
+item5.save
+
 item1.photos.attach(io: file1, filename: 'NR105-116-1.jpg', content_type: 'image/jpg')
 item1.photos.attach(io: file2, filename: 'NR105-116-2.jpg', content_type: 'image/jpg')
 item1.photos.attach(io: file3, filename: 'NR105-116-3.jpg', content_type: 'image/jpg')
@@ -92,3 +105,8 @@ item4.photos.attach(io: file13, filename: 'PCVR17-129bis-1.jpg', content_type: '
 item4.photos.attach(io: file14, filename: 'PCVR17-129bis-2.jpg', content_type: 'image/jpg')
 item4.photos.attach(io: file15, filename: 'PCVR17-129bis-3.jpg', content_type: 'image/jpg')
 item4.photos.attach(io: file16, filename: 'PCVR17-129bis-4.jpg', content_type: 'image/jpg')
+
+item5.photos.attach(io: file17, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
+item5.photos.attach(io: file18, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
+item5.photos.attach(io: file19, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
+item5.photos.attach(io: file20, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
