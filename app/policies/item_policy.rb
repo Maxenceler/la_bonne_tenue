@@ -17,14 +17,11 @@ class ItemPolicy < ApplicationPolicy
     return true
   end
 
-
-  def update
-    raise
+  def update?
     record.user == user
-
   end
 
-  def destroy
+  def destroy?
     record.user == user
   end
 end
