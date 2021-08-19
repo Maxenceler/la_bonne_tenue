@@ -3,14 +3,11 @@ class ItemsController < ApplicationController
 
   def index
     @items = policy_scope(Item)
-    @items = Item.all
 
-    # @items = @items.select { |i| i.beginning_date_id == params[:beginning_date] } unless params[:beginning_date].blank?
-    # @items = @items.select { |i| i.ending_date_id == params[:ending_date] } unless params[:ending_date].blank?
-    # @items = @items.select { |i| i.size == params[:size] } unless params[:size].blank?
-    # @items = @items.select { |i| i.type_id == params[:item_type] } unless params[:item_type].blank?
-
-    @items = Item.where(size: params[:size])
+    if params[:search].present?
+      @items = @items.where(size: params[:search][:size]) if params[:search][:size].present?
+      @items = @items.where(item_type: params[:search][:item_type]) if params[:search][:item_type].present?
+    end
   end
 
   def show
