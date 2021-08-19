@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :find_item, only: [:edit, :destroy, :show ]
 
   def index
     @items = policy_scope(Item)
@@ -11,9 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     authorize @item
-
     @booking = Booking.new
   end
 
@@ -34,17 +33,32 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
   def edit
-    @item = Item.find(params[:id])
+    authorize @item
   end
 
   def update
+    @item = Item.find(params[:id])
+    authorize @item
+
+    if @item.update(items_params)
+    redirect_to item_path(@item)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @item.destroy
+    authorize @item
+    redirect_to bookings_path
   end
 
   private
+
+  def find_item
+    @item = Item.find(params[:id])
+  end
 
   def items_params
     params.require(:item).permit(:title, :size, :color, :price, :occasion, :brand, :description, :photos, :item_type)

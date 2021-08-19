@@ -1,8 +1,5 @@
-<h1>Modifier ce vêtement</h1>
-
-
 <div class="container form-margin-top">
-  <%= simple_form_for @item do |f| %>
+  <%= simple_form_for(item) do |f| %>
     <%= f.input :title, label: false, placeholder: "Titre" %>
     <div class="align-two-fields">
       <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "34", label: false, placeholder: "Taille" %>

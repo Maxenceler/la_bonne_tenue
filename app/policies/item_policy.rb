@@ -16,4 +16,15 @@ class ItemPolicy < ApplicationPolicy
   def create?
     return true
   end
+
+
+  def update
+    raise
+    record.user == user
+
+  end
+
+  def destroy
+    record.user == user
+  end
 end
