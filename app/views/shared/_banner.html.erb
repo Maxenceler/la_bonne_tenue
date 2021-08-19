@@ -10,13 +10,15 @@
     <div class="search-form">
 
       <div class="fields">
-        <%= simple_form_for :search, method: "get" do |f| %>
+        <%= simple_form_for :items, url: item_path, method: :get do |f| %>
           <div style="display: -webkit-box;">
           <%= f.input :starts_at, placeholder: "Date de Début", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "startdate"} %>
           <%= f.input :ends_at, placeholder: "Date de Fin", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "enddate"}%>
 
           <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "34", label: false %>
           <%= f.input :type, collection: ["Type", "Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
+
+          <%= f.submit %>
           </div>
       </div>
 
