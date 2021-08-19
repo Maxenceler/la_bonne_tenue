@@ -4,11 +4,11 @@ class ItemsController < ApplicationController
 
   def index
     @items = policy_scope(Item)
-    @items = Item.all
-  end
 
-  def filtered_index
-    @items = Item.where(params[:query] == params)
+    if params[:search].present?
+      @items = @items.where(size: params[:search][:size]) if params[:search][:size].present?
+      @items = @items.where(item_type: params[:search][:item_type]) if params[:search][:item_type].present?
+    end
   end
 
   def show

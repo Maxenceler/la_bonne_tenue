@@ -72,7 +72,7 @@ item3.user = user1
 item3.save
 
 item4 = Item.create(title: "ensemble tailleur imprimé vert Reiko",
-size: "38", item_type: "costume", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
+size: "38", item_type: "mv", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
 Veste col chemisier et fausse poche passepoilées. Deux boutons à la fin de chaque manche et fermeture sur le devant par un bouton bleu
 Pantalon droit imprimé avec deux fausses poches passepoilées à l'arrière et passants à la taille pour y glisser une ceinture. Fermeture sur le devant à zip bleu et crochet argenté
 Occasions conseillées : Travail, Mariage, Cérémonie Couleur : vert",
@@ -81,7 +81,7 @@ item4.user = user1
 item4.save
 
 item5 = Item.create(title: "Robe longue Bali noire",
-size: "38", item_type: "Robe", color: "Noire", price: 30, description: "Bretelles fines, décolleté cache-coeur, élastique en-dessous de la poitrine, effet soie, décolleté dans le dos",
+size: "38", item_type: "robe", color: "Noire", price: 30, description: "Bretelles fines, décolleté cache-coeur, élastique en-dessous de la poitrine, effet soie, décolleté dans le dos",
 brand: "Stella & Suzie", occasion: "Casual")
 item5.user = user2
 item5.save
