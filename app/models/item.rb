@@ -4,4 +4,5 @@ class Item < ApplicationRecord
   validates :size, :item_type, :color, :price, :title, :occasion, :brand, :description, presence: true
   validates :title, uniqueness: true
   has_many_attached :photos
+  has_one_attached :main_photo
 end
