@@ -4,9 +4,6 @@ class ItemsController < ApplicationController
   def index
     @items = policy_scope(Item)
     @items = Item.all
-    if params[:last].present?
-      @items = Item.all.order("created_at desc").limit(3)
-    end
   end
 
   def filtered_index
@@ -18,7 +15,6 @@ class ItemsController < ApplicationController
     authorize @item
 
     @booking = Booking.new
-    authorize @booking
   end
 
   def new
@@ -31,7 +27,7 @@ class ItemsController < ApplicationController
     @item.user = current_user
     authorize @item
 
-    if @item.save
+    if @item.save!
       redirect_to item_path(@item)
     else
       render :new
