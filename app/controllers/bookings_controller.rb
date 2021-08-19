@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
 
   def create
     item = Item.find(params[:item_id])
-    @booking = Booking.new()
+    @booking = Booking.new(set_dates)
     @booking.item = item
     @booking.user = current_user
     authorize @booking
@@ -40,4 +40,10 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit()
   end
+
+  def set_dates
+    dates = params[:booking][:beginning_date].split("to")
+    {beginning_date: dates[0].strip, ending_date: dates[1].strip}
+  end
+
 end
