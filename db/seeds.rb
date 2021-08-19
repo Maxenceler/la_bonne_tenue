@@ -152,7 +152,7 @@ puts `clear`
 puts rabbit2
 
 item4 = Item.create(title: "ensemble tailleur imprimé vert Reiko",
-size: "38", item_type: "costume", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
+size: "38", item_type: "mv", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
 Veste col chemisier et fausse poche passepoilées. Deux boutons à la fin de chaque manche et fermeture sur le devant par un bouton bleu
 Pantalon droit imprimé avec deux fausses poches passepoilées à l'arrière et passants à la taille pour y glisser une ceinture. Fermeture sur le devant à zip bleu et crochet argenté
 Occasions conseillées : Travail, Mariage, Cérémonie Couleur : vert",
@@ -164,7 +164,7 @@ puts `clear`
 puts rabbit
 
 item5 = Item.create(title: "Robe longue Bali noire",
-size: "38", item_type: "Robe", color: "Noire", price: 30, description: "Bretelles fines, décolleté cache-coeur, élastique en-dessous de la poitrine, effet soie, décolleté dans le dos",
+size: "38", item_type: "robe", color: "Noire", price: 30, description: "Bretelles fines, décolleté cache-coeur, élastique en-dessous de la poitrine, effet soie, décolleté dans le dos",
 brand: "Stella & Suzie", occasion: "Casual")
 item5.user = user2
 item5.save
@@ -172,16 +172,18 @@ item5.save
 puts `clear`
 puts rabbit2
 
-item1.photos.attach(io: file1, filename: 'NR105-116-1.jpg', content_type: 'image/jpg')
+item1.main_photo.attach(io: file1, filename: 'NR105-116-1.jpg', content_type: 'image/jpg')
 item1.photos.attach(io: file2, filename: 'NR105-116-2.jpg', content_type: 'image/jpg')
 item1.photos.attach(io: file3, filename: 'NR105-116-3.jpg', content_type: 'image/jpg')
 item1.photos.attach(io: file4, filename: 'NR105-116-4.jpg', content_type: 'image/jpg')
 
 
+
 puts `clear`
 puts rabbit
 
-item2.photos.attach(io: file5, filename: 'TCBC21-956-1.jpg', content_type: 'image/jpg')
+
+item2.main_photo.attach(io: file5, filename: 'TCBC21-956-1.jpg', content_type: 'image/jpg')
 item2.photos.attach(io: file6, filename: 'TCBC21-956-2.jpg', content_type: 'image/jpg')
 item2.photos.attach(io: file7, filename: 'TCBC21-956-3.jpg', content_type: 'image/jpg')
 item2.photos.attach(io: file8, filename: 'TCBC21-956-4.jpg', content_type: 'image/jpg')
@@ -189,7 +191,7 @@ item2.photos.attach(io: file8, filename: 'TCBC21-956-4.jpg', content_type: 'imag
 puts `clear`
 puts rabbit2
 
-item3.photos.attach(io: file9, filename: 'VR232-1403-1.jpg', content_type: 'image/jpg')
+item3.main_photo.attach(io: file9, filename: 'VR232-1403-1.jpg', content_type: 'image/jpg')
 item3.photos.attach(io: file10, filename: 'VR232-1403-2.jpg', content_type: 'image/jpg')
 item3.photos.attach(io: file11, filename: 'VR232-1403-3.jpg', content_type: 'image/jpg')
 item3.photos.attach(io: file12, filename: 'VR232-1403-4.jpg', content_type: 'image/jpg')
@@ -197,7 +199,8 @@ item3.photos.attach(io: file12, filename: 'VR232-1403-4.jpg', content_type: 'ima
 puts `clear`
 puts rabbit
 
-item4.photos.attach(io: file13, filename: 'PCVR17-129bis-1.jpg', content_type: 'image/jpg')
+
+item4.main_photo.attach(io: file13, filename: 'PCVR17-129bis-1.jpg', content_type: 'image/jpg')
 item4.photos.attach(io: file14, filename: 'PCVR17-129bis-2.jpg', content_type: 'image/jpg')
 item4.photos.attach(io: file15, filename: 'PCVR17-129bis-3.jpg', content_type: 'image/jpg')
 item4.photos.attach(io: file16, filename: 'PCVR17-129bis-4.jpg', content_type: 'image/jpg')
@@ -205,7 +208,7 @@ item4.photos.attach(io: file16, filename: 'PCVR17-129bis-4.jpg', content_type: '
 puts `clear`
 puts rabbit2
 
-item5.photos.attach(io: file17, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
+item5.main_photo.attach(io: file17, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
 item5.photos.attach(io: file18, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
 item5.photos.attach(io: file19, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
 item5.photos.attach(io: file20, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')

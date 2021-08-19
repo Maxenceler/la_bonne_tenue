@@ -15,7 +15,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 16px ;">
           <%= link_to 'Robes', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
-          <%= link_to 'Manteaux & Vestes', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+
+          <%= link_to 'Manteaux & Vestes', items_path(search: {item_type: "mv"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+
           <%= link_to 'Tops & Blouses', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
           <%= link_to 'Pantalons & Jeans', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
           <%= link_to 'Jupes & Shorts', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
@@ -31,10 +33,12 @@
         <%= link_to 'Déposer', new_item_path, class: "nav-link"%>
       </li>
 
+      <%# PROMOTIONS %>
       <%# <li class="nav-item2 mr-2">
         <a class="nav-link" href="#">Promotions</a>
       </li> %>
 
+      <%# NOUVEAUTÉS %>
       <%# <li class="nav-item2">
         <%= link_to 'Nouveautés', items_path, class: "nav-link"%>
       <%# </li> %>
@@ -44,12 +48,17 @@
 <% if user_signed_in? %>
 
   <li class="nav-item dropdown">
-  <p style="display: contents; color: #F2A3A0; font-family: 'Montserrat', sans-serif; ">Bienvenue !</p> <p style="display: contents; color: white;">....</p>
-  <%= cl_image_tag current_user.photo.key, class: "avatar", id: "navbarDropdown2", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-  <div class="dropdown-menu dropdown-menu-lg-right dropdown" style="margin-top: 6px ;" aria-labelledby="navbarDropdownMenuLink-saju">
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mes Demandes</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mes Locations</a>
-          <a class="dropdown-item" href="#" style="color: grey; font-size: 15px;">Mon Dressing</a>
+    <p style="display: contents; color: #F2A3A0; font-family: 'Montserrat', sans-serif; ">Bienvenue !</p> <p style="display: contents; color: white;">....</p>
+    <%= cl_image_tag current_user.photo.key, class: "avatar", id: "navbarDropdown2", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+        <div class="dropdown-menu dropdown-menu-lg-right dropdown" style="margin-top: 6px ;" aria-labelledby="navbarDropdownMenuLink-saju">
+          <%= link_to 'Mes Demandes', bookings_path(anchor: "demandes"), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Mes Locations', bookings_path(anchor: "locations"), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Mon Dressing', bookings_path(anchor: "dressing"), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+
+
+<%# Anchor à revoir %>
+
           <div class="dropdown-divider"></div>
           <%= link_to 'Nouveau Vêtement', new_item_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
           <%= link_to 'Me Déconnecter', destroy_user_session_path, method: :delete, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
