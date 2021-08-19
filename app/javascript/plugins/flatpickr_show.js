@@ -5,7 +5,7 @@ const initFlatpickrShow = () => {
   if (window.location.pathname.match(/\/items\/\d+/)) {
     flatpickr("#startdate", {
       altInput: true,
-      mode: "range",
+      plugins: [new rangePlugin({ input: "#enddate" })],
       inline: true
     });
   }
