@@ -2,13 +2,13 @@
 
 <div class="container">
 
-  <p id="p-index">Accueil / Emprunter / A MODIFIER</p>
+  <%# <p id="p-index">Accueil / Emprunter / A MODIFIER</p> %>
   <div class="cards">
 
     <% @items.each do |item| %>
      <%= link_to item_path(item) do %>
       <%= render "shared/card", item: item %>
-    <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>

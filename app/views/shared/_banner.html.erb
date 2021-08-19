@@ -9,16 +9,18 @@
 
         <%= simple_form_for :search, url: items_path, method: :get do |f| %>
           <div style="display: -webkit-box;">
-          <%= f.input :starts_at, placeholder: "Date de Début", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "startdate"} %>
-          <%= f.input :ends_at, placeholder: "Date de Fin", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "enddate"}%>
+            <%= f.input :beginning_date, placeholder: "Date de Début", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "startdate"} %>
+            <%= f.input :ending_date, placeholder: "Date de Fin", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "enddate"}%>
 
-          <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "34", label: false %>
-          <%= f.input :type, collection: ["Type", "Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
+            <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "38", label: false %>
+            <%= f.input :item_type, collection: ["Type", "Robes", "Manteaux & Vestes", "Tops & Blouses", "Pantalons & Jeans", "Jupes & Shorts", "Sacs & Accessoires"], default: "Robes", label: false %>
 
-          <%= f.submit class: 'pink-button'%>
+            <div class="searchbutton" style="display: contents;">
+              <%= f.submit class: 'pink-button'%>
+            </div>
           </div>
       </div>
-
+      <%= select("size", ["Taille", "34", "36", "38", "40", "42", "44", "46"], {}, { :prompt => 'Select Area' }) %>
       <% end %>
   </div>
 </div>
