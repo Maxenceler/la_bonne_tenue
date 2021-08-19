@@ -12,10 +12,12 @@
 
     <div class="ficheProduit">
       <div class="d-flex">
+
         <div class="d-flex flex-column mr-3">
         <% @item.photos.each do |photo| %>
           <%= cl_image_tag photo.key, height: 250, crop: :fill, class: 'mb-3' %>
         <% end %>
+
         </div>
           <%= cl_image_tag @item.main_photo.key, crop: :fill, height: 630 %>
 
