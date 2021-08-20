@@ -10,7 +10,7 @@
 <div class="container">
   <h1 class="title-margin-top title-margin-bottom" id="locations"> - Mes locations -</h1>
 </div>
-<% @bookings.each do |booking| %>
+<% @bookingss.each do |booking| %>
     <% if booking.item.user == current_user %>
       <%= render "shared/card_product", booking: booking %>
     <% end %>
