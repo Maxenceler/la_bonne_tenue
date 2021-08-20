@@ -9,6 +9,19 @@ const initFlatpickrShow = () => {
       inline: true
     });
   }
-}
+};
 
-export { initFlatpickrShow };
+const initFlatpickrGreyCalendar = () => {
+  const bookingForm = document.getElementById('booking-form-div');
+  if (bookingForm) {
+    const bookings = JSON.parse(bookingForm.dataset.bookings);
+    flatpickr("#startdate", {
+      altInput: true,
+      plugins: [new rangePlugin({ input: "#enddate" })],
+      inline: true,
+      "disable": bookings
+    })
+  }
+};
+
+export { initFlatpickrShow, initFlatpickrGreyCalendar };
