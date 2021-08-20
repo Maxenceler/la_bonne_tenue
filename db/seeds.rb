@@ -149,7 +149,6 @@ file42 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fic
 file43 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/VMBG16-79bis/VMBG16-79-03.jpg?=2008202112')
 file44 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/VMBG16-79bis/VMBG16-79-4.jpg?=2008202112')
 
-file45 = URI.open('https://www.lescachotieres.com/media/cache/resolve/font_product_fiche/uploads/products/JRS24-ML/1%2520copie.jpg')
 file46 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/products/JRS24-ML/2.jpg?=2008202113')
 file47 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/products/JRS24-ML/jupe-camile-zoom.jpg?=2008202113')
 
@@ -379,9 +378,8 @@ item11.photos.attach(io: file42, filename: 'VMBG16-79bis/VMBG16-79-02.jpg?=20082
 item11.photos.attach(io: file43, filename: 'VMBG16-79bis/VMBG16-79-03.jpg?=2008202112', content_type: 'image/jpg')
 item11.photos.attach(io: file44, filename: 'VMBG16-79bis/VMBG16-79-4.jpg?=2008202112', content_type: 'image/jpg')
 
-item12.main_photo.attach(io: file45, filename: 'JRS24-ML/1%2520copie.jpg', content_type: 'image/jpg')
+item12.main_photo.attach(io: file47, filename: 'JRS24-ML/jupe-camile-zoom.jpg?=2008202113', content_type: 'image/jpg')
 item12.photos.attach(io: file46, filename: 'JRS24-ML/2.jpg?=2008202113', content_type: 'image/jpg')
-item12.photos.attach(io: file47, filename: 'JRS24-ML/jupe-camile-zoom.jpg?=2008202113', content_type: 'image/jpg')
 
 item13.main_photo.attach(io: file48, filename: 'JBG5-ML/camilla-champagne_4.jpg', content_type: 'image/jpg')
 item13.photos.attach(io: file49, filename: 'JBG5-ML/camilla-champagne_2.jpg?=2008202113', content_type: 'image/jpg')
