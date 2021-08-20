@@ -20,7 +20,7 @@
           <% end %>
         </div>
 
-        <% if @item.photos.attached? %>
+        <% if @item.main_photo.attached? %>
           <%= cl_image_tag @item.main_photo.key, crop: :fill, height: 780 %>
         <% end %>
 
