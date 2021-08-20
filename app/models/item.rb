@@ -7,6 +7,8 @@ class Item < ApplicationRecord
   has_many_attached :photos
   has_one_attached :main_photo
 
+  ITEM_TYPES = {"robe" => "Robes", "mv" => "Manteaux & Vestes", "tb" => "Tops & Blouses", "pj" => "Pantalons & Jeans", "js" => "Jupes & Shorts", "sa" => "Sacs & Accessoires"}
+
   def available?(beginning_date, ending_date)
     range1 = (beginning_date..ending_date)
     self.bookings.each do |booking|
@@ -15,5 +17,6 @@ class Item < ApplicationRecord
     end
     return true
   end
+
 
 end
