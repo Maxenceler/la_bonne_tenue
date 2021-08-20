@@ -32,10 +32,12 @@
             </div>
 
               <%# CALENDAR%>
+              <% if @item.user != current_user  %>
               <%= simple_form_for [ @item, @booking ] do |f| %>
               <%= f.input :beginning_date, as: :string, required: false, label: false, input_html: {class: "datepicker d-none",id: "startdate"} %>
               <%= f.input :ending_date, as: :string, required: false, label: false, input_html: {class: "datepicker d-none",id: "enddate"} %>
               <%= f.submit 'Louer', class: 'pink-button', style: "width: 100px;"%>
+              <% end %>
               <% end %>
 
               <div class="p-0 d-flex flex-column order-2 order-lg-1 w-100">
