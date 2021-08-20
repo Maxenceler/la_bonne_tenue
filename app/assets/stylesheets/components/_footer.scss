@@ -2,7 +2,7 @@
   background-color: white;
   display: grid;
   align-items: center;
-  height: 100px;
+  height: 120px;
   padding: 0px 50px;
   color: black;
   margin-top: 40px
@@ -37,4 +37,12 @@
 
 .footer-copyright h2 {
   font-size: 22px;
+}
+
+.navbar-brand {
+  margin-top: -16px;
+  height: 66px;
+  width: 55px;
+  margin-bottom: -13px;
+  margin-left: 16px;
 }
