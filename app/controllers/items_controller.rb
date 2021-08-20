@@ -14,6 +14,14 @@ class ItemsController < ApplicationController
   def show
     authorize @item
     @booking = Booking.new
+
+    @bookings = @item.bookings
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.beginning_date,
+        to:   booking.ending_date
+      }
+    end
   end
 
   def new
