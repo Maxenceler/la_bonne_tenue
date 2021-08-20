@@ -26,7 +26,6 @@ class BookingsController < ApplicationController
       flash[:alert] = "Item already booked for these dates"
       render 'items/show'
     end
-
   end
 
   def destroy
