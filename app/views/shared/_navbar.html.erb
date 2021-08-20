@@ -14,14 +14,14 @@
           Produits
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 16px ;">
-          <%= link_to 'Robes', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Robes', items_path(search: {item_type: "robe"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
 
           <%= link_to 'Manteaux & Vestes', items_path(search: {item_type: "mv"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
 
-          <%= link_to 'Tops & Blouses', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
-          <%= link_to 'Pantalons & Jeans', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
-          <%= link_to 'Jupes & Shorts', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
-          <%= link_to 'Sacs & Accessoires', items_path, class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Tops & Blouses', items_path(search: {item_type: "tb"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Pantalons & Jeans', items_path(search: {item_type: "pj"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Jupes & Shorts', items_path(search: {item_type: "js"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
+          <%= link_to 'Sacs & Accessoires', items_path(search: {item_type: "sa"}), class: "dropdown-item", style: "color: grey; font-size: 15px;"%>
         </div>
       </li>
 

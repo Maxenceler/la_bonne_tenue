@@ -14,7 +14,7 @@
               <%= f.input :beginning_date, placeholder: "Date de Début", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "startdate"} %>
               <%= f.input :ending_date, placeholder: "Date de Fin", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "enddate"}%>
 
-              <%= f.input :size, collection: [["Size", ""], ["34","34"], ["36", "36"], ["38", "38"], ["40", "40"], ["42", "42"]], default: "38", label: false %>
+              <%= f.input :size, collection: [["Taille", ""], ["34","34"], ["36", "36"], ["38", "38"], ["40", "40"], ["42", "42"]], default: "38", label: false %>
               <%= f.input :item_type, collection: [["Type", ""], ["Robes", "robe"], ["Manteaux & Vestes", "mv"], ["Tops & Blouses", "tb"], ["Pantalons & Jeans", "pj"], ["Jupes & Shorts", "js"], ["Sacs & Accessoires", "sa"]], default: "Robes", label: false %>
             </div>
 
