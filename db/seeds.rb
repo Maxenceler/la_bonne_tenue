@@ -193,8 +193,7 @@ file78 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fic
 file79 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/ACCC16-597bis/ACCC16-597-4.jpg?=2008202113')
 
 
-item1 = Item.new(title: "robe en dentelle bicolore Sandro", size: "36", item_type: "robe", color: "noir", price: 50, description: "Robe noire et blanche Sandro. Tout en dentelle et empiècement laissant entrevoir la peau en transparence à la carrure, manches courtes, col cravate à nouer ou à laisser lâche. Fermeture par un zip métal doré milieu dos.
-Occasions conseillées : Au travail, Cérémonie, Soirée / Fête Couleur : noir, blanc",
+item1 = Item.new(title: "Robe en dentelle bicolore", size: "36", item_type: "robe", color: "noir", price: 50, description: "Tout en dentelle et empiècement laissant entrevoir la peau en transparence à la carrure, manches courtes, col cravate à nouer ou à laisser lâche. Fermeture par un zip métal doré milieu dos.",
 brand: "Sandro", occasion: "Travail")
 item1.user = user2
 item1.save
@@ -203,9 +202,8 @@ puts `clear`
 puts rabbit2
 
 
-item2 = Item.create(title: "robe de mariée Mademoiselle R", size: "40", item_type: "robe", color: "blanche", price: 150, description: "Ensemble top blanc avec épaules en dentelle et jupe longue blanche en tulle Mademoiselle R avec crop top, dos nu avec fermeture par boutons et jupe à boutonnière apparente dans le bas du dos et taille marquée
-Occasions conseillées : Se marier, Mariage, Cérémonie, Couleur : blanc",
-brand: "Mademoiselle R", occasion: "Se marier")
+item2 = Item.create(title: "Robe de mariée", size: "40", item_type: "robe", color: "blanche", price: 150, description: "Ensemble top blanc avec épaules en dentelle et jupe longue blanche en tulle Mademoiselle R avec crop top, dos nu avec fermeture par boutons et jupe à boutonnière apparente dans le bas du dos et taille marquée",
+brand: "Mademoiselle R", occasion: "Grand évènement")
 item2.user = user3
 item2.save
 
@@ -213,10 +211,8 @@ item2.save
 puts `clear`
 puts rabbit
 
-item3 = Item.create(title: "robe longue satinée",
-size: "40", item_type: "robe", color: "verte", price: 70, description: "Robe longue verte satinée ouverture dans le dos ROVANA Maje, manches courtes amples et encolure bateau. Ouverture croisée dans le dos et taille marquée. La jupe possède deux fentes sur les côtés à partir du genou. Fermeture dans le dos à zip invisible
-Occasions conseillées : Gala, Mariage, Cérémonie, Bal Couleur : vert",
-brand: "Maje", occasion: "Cockail")
+item3 = Item.create(title: "Robe longue satinée", size: "40", item_type: "robe", color: "Verte", price: 70, description: "Manches courtes amples et encolure bateau. Ouverture croisée dans le dos et taille marquée. La jupe possède deux fentes sur les côtés à partir du genou. Fermeture dans le dos à zip invisible",
+brand: "Maje", occasion: "Soirée")
 item3.user = user1
 item3.save
 
@@ -224,47 +220,35 @@ item3.save
 puts `clear`
 puts rabbit2
 
-item4 = Item.create(title: "ensemble tailleur imprimé vert Reiko",
-size: "38", item_type: "pj", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
-Veste col chemisier et fausse poche passepoilées. Deux boutons à la fin de chaque manche et fermeture sur le devant par un bouton bleu
-Pantalon droit imprimé avec deux fausses poches passepoilées à l'arrière et passants à la taille pour y glisser une ceinture. Fermeture sur le devant à zip bleu et crochet argenté
-Occasions conseillées : Travail, Mariage, Cérémonie Couleur : vert",
-brand: "Reiko", occasion: "Travail")
+item4 = Item.create(title: "Pantalon imprimé vert", size: "38", item_type: "pj", color: "vert", price: 45, description: "Pantalon droit imprimé avec deux fausses poches passepoilées à l'arrière et passants à la taille pour y glisser une ceinture. Fermeture sur le devant à zip bleu et crochet argenté",
+brand: "Reiko", occasion: "Casual")
 item4.user = user2
 item4.save
 
 puts `clear`
 puts rabbit
 
-item5 = Item.create(title: "Robe longue Bali noire",
-size: "38", item_type: "robe", color: "Blanc", price: 55, description: "ENSEMBLE HAUT DENTELLE BLANCHE MADELEINE ET JUPE MIDI BLANC",
-brand: "MAISON LEMOINE", occasion: "Casual")
+item5 = Item.create(title: "Robe en dentelle", size: "38", item_type: "robe", color: "Blanc", price: 55, description: "ENSEMBLE HAUT DENTELLE BLANCHE MADELEINE ET JUPE MIDI BLANC", brand: "MAISON LEMOINE", occasion: "Casual")
 item5.user = user1
 item5.save
 
-item6 = Item.create(title: "Pochette noire Yves St Laurent",
-size: "Unique", item_type: "sa", color: "Noire", price: 35, description: "Pochette noire en cuir reliefé monogramme Yves Saint Laurent. Une anse amovible sur le côté et une grande pochette plate intérieure. fermeture par un zip doré
-Occasions conseillées : Luxe, Cocktail, Gala, Mariage, Cérémonie, Bal Couleur : noir", brand: "Yves St Laurent", occasion: "Chic")
+item6 = Item.create(title: "Pochette noire", size: "34", item_type: "sa", color: "Noire", price: 35, description: "Une anse amovible sur le côté et une grande pochette plate intérieure. fermeture par un zip doré", brand: "Yves St Laurent", occasion: "Grand Évènement")
 item6.user = user2
 item6.save
 
-item7 = Item.create(title: "Peigne avec pétales roses Maison Guillemette",
-size: "Unique", item_type: "sa", color: "Rose", price: 20, description: "Peigne de pétales roses pâles PORQUEROLLES Maison Guillemette à attacher dans les cheveux. Armature dorée et pétales roses pâles légères
-Occasions conseillées : Se marier, Mariage, Cérémonie Couleur : rose", brand: "Maison Guillemette", occasion: "Mariage")
+item7 = Item.create(title: "Peigne avec pétales roses", size: "Unique", item_type: "sa", color: "Rose", price: 20, description: "Armature dorée et pétales roses pâles légères", brand: "Maison Guillemette", occasion: "Grand Évènement")
 item7.user = user2
 item7.save
 
-item8 = Item.create(title: "Chapeau en paille Maison Eugénie", size: "Unique", item_type: "sa", color: "Beige", price: 50, description: "Chapeau en paille et broderies Maison Eugénie bord large recourbé. Un serre-tête permet de tenir le chapeau sur la tête et 4 oiseaux sont brodés sur le bord en paille
-Occasions conseillées : Mariage, Cérémonie Couleur : jaune, beige", brand: "Maison Guillemette", occasion: "Mariage")
+item8 = Item.create(title: "Chapeau en paille", size: "34", item_type: "sa", color: "Beige", price: 50, description: "Un serre-tête permet de tenir le chapeau sur la tête et 4 oiseaux sont brodés sur le bord en paille", brand: "Maison Guillemette", occasion: "Grand Évènement")
 item8.user = user3
 item8.save
 
-item9 = Item.create(title: "Manteau blanc Hugo Boss", size: "38", item_type: "mv", color: "Blanc", price: 75, description: "Manteau blanc en fausse fourrure Hugo Boss manches longues et longueur midi. Coupe oversize se ferment par un bouton blanc invisible
-Occasions conseillées : Gala, Se marier, Bal Couleur : blanc", brand: "Hugo Boss", occasion: "Casual")
+item9 = Item.create(title: "Manteau blanc", size: "38", item_type: "mv", color: "Blanc", price: 75, description: "Manteau blanc en fausse fourrure manches longues et longueur midi. Coupe oversize se ferment par un bouton blanc invisible", brand: "Hugo Boss", occasion: "Casual")
 item9.user = user2
 item9.save
 
-item10 = Item.create(title: "Veste en Tweed Sandro", size: "36", item_type: "mv", color: "Bleu", price: 35, description: "Veste en tweed multicolore Sandro. Manches longues et encolure ronde de forme tailleur, bords frangés, petits écussons sur le devant de la veste.", brand: "Sandro", occasion: "Casual")
+item10 = Item.create(title: "Veste en Tweed", size: "36", item_type: "mv", color: "Bleu", price: 35, description: "Manches longues et encolure ronde de forme tailleur, bords frangés, petits écussons sur le devant de la veste.", brand: "Sandro", occasion: "Casual")
 item10.user = user1
 item10.save
 

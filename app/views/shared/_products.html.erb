@@ -8,63 +8,39 @@
 <div class="container" id="Products avatar" style="display: flex; justify-content: space-between;">
 
   <div>
-  <%# <%= link_to 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80', items_path, style: "
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;" %>
-    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80", alt= items_path, style="
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;"/>
+    <%= link_to items_path(search: {item_type: "robe"}) do %>
+      <%= image_tag "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80", class: "homepage-pictures" %>
+    <% end %>
   </div>
 
   <div>
-    <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1554&q=80" style="
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;"/>
+    <%= link_to items_path(search: {item_type: "mv"}) do %>
+      <%= image_tag "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1554&q=80", class: "homepage-pictures" %>
+    <% end %>
   </div>
 
   <div>
-    <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" style="
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;"/>
+    <%= link_to items_path(search: {item_type: "tb"}) do %>
+      <%= image_tag "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", class: "homepage-pictures" %>
+    <% end %>
   </div>
 
   <div>
-    <img src="https://images.unsplash.com/photo-1527180718958-1721e2518786?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1570&q=80" style="
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;"/>
+    <%= link_to items_path(search: {item_type: "pj"}) do %>
+      <%= image_tag "https://images.unsplash.com/photo-1527180718958-1721e2518786?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1570&q=80", class: "homepage-pictures" %>
+    <% end %>
   </div>
 
   <div>
-    <img src="https://images.unsplash.com/photo-1623832101940-647285e32a58?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" style="
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;"/>
+    <%= link_to items_path(search: {item_type: "js"}) do %>
+      <%= image_tag "https://images.unsplash.com/photo-1623832101940-647285e32a58?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80", class: "homepage-pictures" %>
+    <% end %>
   </div>
 
   <div>
-    <img src="https://images.unsplash.com/photo-1559563458-527698bf5295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" style="
-      width: 115px;
-      height: 115px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;"/>
+    <%= link_to items_path(search: {item_type: "sa"}) do %>
+      <%= image_tag "https://images.unsplash.com/photo-1559563458-527698bf5295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", class: "homepage-pictures" %>
+    <% end %>
   </div>
 </div>
 
@@ -75,13 +51,4 @@
     <p style="margin-right: -7px;">- Pantalons & Jeans -</p>
     <p style="margin-right: 4px;">- Jupes & Shorts -</p>
     <p style="margin-right: -38px;">- Sacs & Accessoires -</p>
-
-    <%# <%= link_to '- Robes -', items_path, style: "margin-left: 16px;" %>
-    <%# <%= link_to '- Manteaux & Vestes -', items_path, style: "margin-left: 16px;" %>
-    <%# <%= link_to '- Tops & Blouses -', items_path, style: "margin-left: 16px;" %>
-    <%# <%= link_to '- Pantalons & Jeans -', items_path, style: "margin-left: 16px;" %>
-    <%# <%= link_to '- Jupes & Shorts -', items_path, style: "margin-left: 16px;" %>
-    <%# <%= link_to '- Sacs & Accessoires -', items_path, style: "margin-left: 16px;" %>
-
-
 </div>
