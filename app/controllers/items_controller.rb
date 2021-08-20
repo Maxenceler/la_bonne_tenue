@@ -9,6 +9,8 @@ class ItemsController < ApplicationController
       @items = @items.where(size: params[:search][:size]) if params[:search][:size].present?
       @items = @items.where(item_type: params[:search][:item_type]) if params[:search][:item_type].present?
     end
+
+
   end
 
   def show

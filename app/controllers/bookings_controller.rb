@@ -24,7 +24,6 @@ class BookingsController < ApplicationController
      else
       render 'items/show'
     end
-
   end
 
   def destroy
