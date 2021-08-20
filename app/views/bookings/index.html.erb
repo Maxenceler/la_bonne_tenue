@@ -12,7 +12,7 @@
   <p id="locations" style="margin-bottom: -70px; color: #FFFFFF;">...</p>
   <h1 class="title-margin-top title-margin-bottom"> - Mes locations -</h1>
 </div>
-<% @bookings.each do |booking| %>
+<% @bookingss.each do |booking| %>
     <% if booking.item.user == current_user %>
       <%= render "shared/card_product", booking: booking %>
     <% end %>

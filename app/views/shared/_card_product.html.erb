@@ -1,22 +1,29 @@
 <div class="container">
-  <div class="card-product">
-    <% if booking.item.main_photo.attached? %>
-      <%= cl_image_tag booking.item.main_photo.key, crop: :fill, class:"card-picture" %>
-    <% end %>
 
-    <div class="card-product-infos">
-      <h2><%= booking.item.title.capitalize %></h2>
-      <p><%="Date de début : #{booking.beginning_date}" %></p>
-      <p><%= "Date de fin : #{booking.ending_date}" %></p>
-      <p><%= "#{booking.status}" %></p>
-      <% if booking.status == "pending" && booking.item.user == current_user %>
-      <%= link_to booking_path(booking, status: "accepted" ), method: :patch, class: "accepted" do %>
-        <i class="fas fa-check"></i>
+  <div class="card-product">
+
+    <div class="test-test">
+      <% if booking.item.main_photo.attached? %>
+        <%= cl_image_tag booking.item.main_photo.key, crop: :fill, class:"card-picture" %>
       <% end %>
-      <%= link_to booking_path(booking, status: "refused"), method: :patch, class: "refused" do %>
-        <i class="fas fa-times"></i>
-      <% end %>
-      <% end %>
+
+      <div class="card-product-infos">
+          <h2><%= booking.item.title.capitalize %></h2>
+          <p><%="Date de début : #{booking.beginning_date}" %></p>
+          <p><%= "Date de fin : #{booking.ending_date}" %></p>
+          <p><%= "#{booking.status}" %></p>
+      </div>
     </div>
+
+    <div class="icon_valid">
+        <% if booking.status == "pending" && booking.item.user == current_user %>
+        <%= link_to booking_path(booking, status: "accepted" ), method: :patch, class: "accepted" do %>
+          <i class="far fa-check-circle icon-validation"></i>
+        <% end %>
+        <%= link_to booking_path(booking, status: "refused"), method: :patch, class: "refused" do %>
+          <i class="far fa-times-circle icon-refuse"></i>
+        <% end %>
+        <% end %>
+      </div>
   </div>
 </div>

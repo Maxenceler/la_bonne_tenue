@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  validate :booking_cant_overlap_another_one
+  validate :booking_cant_overlap_another_one, on: :create
   belongs_to :user
   belongs_to :item
   validates :beginning_date, presence: true
