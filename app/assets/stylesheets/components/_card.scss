@@ -32,6 +32,7 @@
   height: 100px;
   color: black;
   transition: 0.3s;
+  bottom: 10px;
 }
 
 .card-trip:hover {
@@ -42,7 +43,7 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
+  top: -5px;
   width: 40px;
 }
 
@@ -65,4 +66,5 @@ a:hover {
 .icon-placement {
   margin-top: 10px;
   margin-left: 10px;
+  color:#F2A3A0;
 }

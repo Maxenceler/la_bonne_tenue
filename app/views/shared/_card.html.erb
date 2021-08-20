@@ -7,18 +7,20 @@
 
     <% if current_page?(bookings_path) %>
         <%= link_to edit_item_path(item) do %>
-        <i class="far fa-edit icon-placement"></i>
+        <i class="far fa-edit icon-placement" style="color:#F2A3A0"></i>
         <% end %>
         <%= link_to item_path(item),  method: :delete,
             data: { confirm: "Are you sure?" } do %>
-        <i class="far fa-trash-alt"></i>
+        <i class="far fa-trash-alt " style="color:#F2A3A0"></i>
         <% end %>
     <% end %>
     <div class="card-trip-infos">
       <div>
-        <h2><%= item.title.capitalize %></h2>
+        <h2>T: <%=item.size.capitalize %></h2>
+        <h2><%=item.brand %></h2>
+        <%# Item::ITEM_TYPES[item.item_type] %>
       </div>
-      <h2 class="card-trip-pricing"><%= "#{item.price} €"%></h2>
+      <h2 class="card-trip-pricing" style="color:#F2A3A0"><%= "#{item.price} €"%></h2>
       <%= cl_image_tag item.user.photo.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
     </div>
   </div>
