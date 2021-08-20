@@ -8,6 +8,12 @@ class ItemsController < ApplicationController
     if params[:search].present?
       @items = @items.where(size: params[:search][:size]) if params[:search][:size].present?
       @items = @items.where(item_type: params[:search][:item_type]) if params[:search][:item_type].present?
+
+      if params[:search][:beginning_date].present? && params[:search][:ending_date].present?
+        @items = @items.map do |item|
+          item if item.available?(params[:search][:beginning_date], params[:search][:ending_date])
+        end
+      end
     end
 
 
