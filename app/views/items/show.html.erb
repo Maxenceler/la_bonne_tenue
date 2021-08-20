@@ -13,12 +13,16 @@
       <div class="d-flex">
 
         <div class="d-flex flex-column mr-3">
+        <% if @item.photos.attached? %>
           <% @item.photos.each do |photo| %>
            <%= cl_image_tag photo.key, height: 250, crop: :fill, class: "bg-image hover-zoom mb-3 " %>
           <% end %>
+          <% end %>
         </div>
 
+        <% if @item.photos.attached? %>
           <%= cl_image_tag @item.main_photo.key, crop: :fill, height: 780 %>
+        <% end %>
 
         <div class="d-flex flex-column" style="text-align: left; margin-left: 50px; margin-right: 50px;">
 
