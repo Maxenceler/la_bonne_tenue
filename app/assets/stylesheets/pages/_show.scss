@@ -10,7 +10,6 @@
 }
 
 .typoFine {
-    font-family: "Raleway",sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -19,10 +18,15 @@
 
 .breadcrumbFine {
     margin: 0 20px 20px 0;
-    padding: 0;
     text-decoration: none;
     color: inherit;
     background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-radius: 2px;
 }
 
 .ficheProduit {
@@ -32,10 +36,10 @@
 
 .ficheProduit .nom-produit {
     text-transform: uppercase;
-    text-align: center;
-    font-size: 15px;
+    text-align: left;
+    font-size: 30px;
     font-weight: bold;
-    margin: 0px 210px 30px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .row {
@@ -58,7 +62,7 @@
     position: relative;
 }
 
-.pink-button {
+.pink-buttons {
   padding: 8px 4px;
   background-color: #F2A3A0;
   border-radius: 4px;

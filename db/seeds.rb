@@ -119,6 +119,30 @@ file20 = URI.open('https://cdn3.easy-clothes.com/37231-thickbox_default/robe-lon
 puts `clear`
 puts rabbit
 
+file21 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/thumb/font_product_basket3/uploads/products/ACCS49-823/ACCS49-823-1.jpg')
+file22 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/thumb/font_product_basket3/uploads/products/ACCS49-823/ACCS49-823-2.jpg')
+file23 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/thumb/font_product_basket3/uploads/products/ACCS49-823/ACCS49-823-3.jpg')
+file24 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/thumb/font_product_basket3/uploads/products/ACCS49-823/ACCS49-823-4.jpg')
+
+file25 = URI.open('https://www.lescachotieres.com/uploads/products/ACCC24-1354/ACCC24-1354-1.jpg')
+file26 = URI.open('https://www.lescachotieres.com/uploads/products/ACCC24-1354/ACCC24-1354-1.jpg')
+file27 = URI.open('https://www.lescachotieres.com/uploads/products/ACCC24-1354/ACCC24-1354-1.jpg')
+file28 = URI.open('https://www.lescachotieres.com/uploads/products/ACCC24-1354/ACCC24-1354-1.jpg')
+
+file29 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/products/ACCC14-603/ACCC14-603-1.jpg')
+file30 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/products/ACCC14-603/ACCC14-603-2.jpg')
+file31 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/products/ACCC14-603/ACCC14-603-3.jpg')
+file32 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_basket3/uploads/products/ACCC14-603/ACCC14-603-3.jpg')
+
+file33 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/VMBC14-1289bis/VMBC14-1289-1.jpg')
+file34 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/VMBC14-1289bis/VMBC14-1289-2.jpg')
+file35 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/VMBC14-1289bis/VMBC14-1289-3.jpg')
+file36 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/thumb/font_product_basket3/uploads/products/VMBC14-1289bis/VMBC14-1289-4.jpg')
+
+file37 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/products/VMBE2-37-bis/VMBE2-37-1.jpg')
+file38 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/products/VMBE2-37-bis/VMBE2-37-2.jpg')
+file39 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/products/VMBE2-37-bis/VMBE2-37-3.jpg')
+file40 = URI.open('https://www.lescachotieres.com/uploads/thumb/font_product_fiche/uploads/products/VMBE2-37-bis/VMBE2-37-4.jpg')
 
 item1 = Item.new(title: "robe en dentelle bicolore Sandro", size: "36", item_type: "robe", color: "noir", price: 50, description: "Robe noire et blanche Sandro. Tout en dentelle et empiècement laissant entrevoir la peau en transparence à la carrure, manches courtes, col cravate à nouer ou à laisser lâche. Fermeture par un zip métal doré milieu dos.
 Occasions conseillées : Au travail, Cérémonie, Soirée / Fête Couleur : noir, blanc",
@@ -157,7 +181,7 @@ Veste col chemisier et fausse poche passepoilées. Deux boutons à la fin de cha
 Pantalon droit imprimé avec deux fausses poches passepoilées à l'arrière et passants à la taille pour y glisser une ceinture. Fermeture sur le devant à zip bleu et crochet argenté
 Occasions conseillées : Travail, Mariage, Cérémonie Couleur : vert",
 brand: "Reiko", occasion: "Travail")
-item4.user = user1
+item4.user = user2
 item4.save
 
 puts `clear`
@@ -166,8 +190,35 @@ puts rabbit
 item5 = Item.create(title: "Robe longue Bali noire",
 size: "38", item_type: "robe", color: "Noire", price: 30, description: "Bretelles fines, décolleté cache-coeur, élastique en-dessous de la poitrine, effet soie, décolleté dans le dos",
 brand: "Stella & Suzie", occasion: "Casual")
-item5.user = user2
+item5.user = user1
 item5.save
+
+item6 = Item.create(title: "Pochette noire Yves St Laurent",
+size: "Unique", item_type: "Sacs & Accessoires", color: "Noire", price: 35, description: "Pochette noire en cuir reliefé monogramme Yves Saint Laurent. Une anse amovible sur le côté et une grande pochette plate intérieure. fermeture par un zip doré
+Occasions conseillées : Luxe, Cocktail, Gala, Mariage, Cérémonie, Bal Couleur : noir", brand: "Yves St Laurent", occasion: "Chic")
+item6.user = user2
+item6.save
+
+item7 = Item.create(title: "Peigne avec pétales roses Maison Guillemette",
+size: "Unique", item_type: "Sacs & Accessoires", color: "Rose", price: 20, description: "Peigne de pétales roses pâles PORQUEROLLES Maison Guillemette à attacher dans les cheveux. Armature dorée et pétales roses pâles légères
+Occasions conseillées : Se marier, Mariage, Cérémonie Couleur : rose", brand: "Maison Guillemette", occasion: "Mariage")
+item7.user = user2
+item7.save
+
+item8 = Item.create(title: "Chapeau en paille Maison Eugénie", size: "Unique", item_type: "Sacs & Accessoires", color: "Beige", price: 50, description: "Chapeau en paille et broderies Maison Eugénie bord large recourbé. Un serre-tête permet de tenir le chapeau sur la tête et 4 oiseaux sont brodés sur le bord en paille
+Occasions conseillées : Mariage, Cérémonie Couleur : jaune, beige", brand: "Maison Guillemette", occasion: "Mariage")
+item8.user = user3
+item8.save
+
+item9 = Item.create(title: "Manteau blanc Hugo Boss", size: "38", item_type: "Manteaux & Vestes", color: "Blanc", price: 75, description: "Manteau blanc en fausse fourrure Hugo Boss manches longues et longueur midi. Coupe oversize se ferment par un bouton blanc invisible
+Occasions conseillées : Gala, Se marier, Bal Couleur : blanc", brand: "Hugo Boss", occasion: "Casual")
+item9.user = user1
+item9.save
+
+item10 = Item.create(title: "Veste en Tweed Sandro", size: "36", item_type: "Manteaux & Vestes", color: "Bleu", price: 35, description: "Veste en tweed multicolore Sandro. Manches longues et encolure ronde de forme tailleur, bords frangés, petits écussons sur le devant de la veste.
+Occasions conseillées : Cérémonie Couleur : bleu", brand: "Sandro", occasion: "Casual")
+item10.user = user1
+item10.save
 
 puts `clear`
 puts rabbit2
@@ -212,3 +263,28 @@ item5.main_photo.attach(io: file17, filename: 'robe-longue-bali-noire-129.jpg', 
 item5.photos.attach(io: file18, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
 item5.photos.attach(io: file19, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
 item5.photos.attach(io: file20, filename: 'robe-longue-bali-noire-129.jpg', content_type: 'image/jpg')
+
+item6.main_photo.attach(io: file21, filename: 'ACCS49-823/ACCS49-823-1', content_type: 'image/jpg')
+item6.photos.attach(io: file22, filename: 'ACCS49-823/ACCS49-823-2', content_type: 'image/jpg')
+item6.photos.attach(io: file23, filename: 'ACCS49-823/ACCS49-823-3', content_type: 'image/jpg')
+item6.photos.attach(io: file24, filename: 'ACCS49-823/ACCS49-823-4', content_type: 'image/jpg')
+
+item7.main_photo.attach(io: file25, filename: 'ACCC24-1354-1.jpg', content_type: 'image/jpg')
+item7.photos.attach(io: file26, filename: 'ACCC24-1354-1.jpg', content_type: 'image/jpg')
+item7.photos.attach(io: file27, filename: 'ACCC24-1354-1.jpg', content_type: 'image/jpg')
+item7.photos.attach(io: file28, filename: 'ACCC24-1354-1.jpg', content_type: 'image/jpg')
+
+item8.main_photo.attach(io: file29, filename: 'ACCC14-603-1.jpg', content_type: 'image/jpg')
+item8.photos.attach(io: file30, filename: 'ACCC14-603-2.jpg', content_type: 'image/jpg')
+item8.photos.attach(io: file31, filename: 'ACCC14-603-3.jpg', content_type: 'image/jpg')
+item8.photos.attach(io: file32, filename: 'ACCC14-603-4.jpg', content_type: 'image/jpg')
+
+item9.main_photo.attach(io: file33, filename: 'VMBC14-1289-1.jpg', content_type: 'image/jpg')
+item9.photos.attach(io: file34, filename: 'VMBC14-1289-2.jpg', content_type: 'image/jpg')
+item9.photos.attach(io: file35, filename: 'VMBC14-1289-3.jpg', content_type: 'image/jpg')
+item9.photos.attach(io: file36, filename: 'VMBC14-1289-4.jpg', content_type: 'image/jpg')
+
+item10.main_photo.attach(io: file37, filename: 'VMBE2-37-4.jpg', content_type: 'image/jpg')
+item10.photos.attach(io: file38, filename: 'VMBE2-37-4.jpg', content_type: 'image/jpg')
+item10.photos.attach(io: file39, filename: 'VMBE2-37-4.jpg', content_type: 'image/jpg')
+item10.photos.attach(io: file40, filename: 'VMBE2-37-4.jpg', content_type: 'image/jpg')
