@@ -1,6 +1,9 @@
 <div class="container">
   <div class="card-product">
-    <%= cl_image_tag booking.item.main_photo.key, crop: :fill, class:"card-picture" %>
+    <% if booking.item.main_photo.attached? %>
+      <%= cl_image_tag booking.item.main_photo.key, crop: :fill, class:"card-picture" %>
+    <% end %>
+
     <div class="card-product-infos">
       <h2><%= booking.item.title.capitalize %></h2>
       <p><%="Date de début : #{booking.beginning_date}" %></p>
