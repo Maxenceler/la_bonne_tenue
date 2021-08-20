@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJlc3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
 
-  <div class="container">
+  <div class="container" style="margin-top: 30px; margin-bottom: -30px;">
 
     <h1 id="banner-title">La Bonne Tenue</h1>
     <p class="font-family: 'Montserrat', sans-serif;">Trouvez de superbes tenues à louer</p>
@@ -10,17 +10,20 @@
         <%= simple_form_for :search, url: items_path, method: :get do |f| %>
         <%# simple_form_for [@chemin1, @chemin2] %>
 
-          <div style="display: -webkit-box;">
-            <%= f.input :beginning_date, placeholder: "Date de Début", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "startdate"} %>
-            <%= f.input :ending_date, placeholder: "Date de Fin", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "enddate"}%>
+          <div>
+            <div class="container" style="width: 770px;padding-top: 15px;display: flex;justify-content: space-evenly;background-color: #c3c1c1;">
+              <%= f.input :beginning_date, placeholder: "Date de Début", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "startdate"} %>
+              <%= f.input :ending_date, placeholder: "Date de Fin", as: :string, required: false, label: false, input_html: {class: "datepicker", id: "enddate"}%>
 
-            <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "38", label: false %>
-            <%= f.input :item_type, collection: [["Type", ""], ["Robes", "robe"], ["Manteaux & Vestes", "mv"], ["Tops & Blouses", "tb"], ["Pantalons & Jeans", "pj"], ["Jupes & Shorts", "js"], ["Sacs & Accessoires", "sa"]], default: "Robes", label: false %>
+              <%= f.input :size, collection: ["Taille", "34", "36", "38", "40", "42", "44", "46"], default: "38", label: false %>
+              <%= f.input :item_type, collection: [["Type", ""], ["Robes", "robe"], ["Manteaux & Vestes", "mv"], ["Tops & Blouses", "tb"], ["Pantalons & Jeans", "pj"], ["Jupes & Shorts", "js"], ["Sacs & Accessoires", "sa"]], default: "Robes", label: false %>
+            </div>
 
-            <div class="searchbutton" style="display: contents;">
+            <div class="searchbutton" style="text-align: center;">
               <%= f.submit class: 'pink-button'%>
               <%# ligne json %>
             </div>
+
           </div>
       </div>
       <% end %>
