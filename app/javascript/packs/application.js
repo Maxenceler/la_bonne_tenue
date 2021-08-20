@@ -27,6 +27,7 @@ import "bootstrap";
 
 import { initFlatpickr } from "../plugins/flatpickr";
 import { initFlatpickrShow } from "../plugins/flatpickr_show";
+import { initFlatpickrGreyCalendar } from "../plugins/flatpickr_show";
 
 
 // Internal imports, e.g:
@@ -37,5 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initFlatpickr();
   initFlatpickrShow();
-
+  initFlatpickrGreyCalendar();
 });
