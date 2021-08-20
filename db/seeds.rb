@@ -176,7 +176,7 @@ puts `clear`
 puts rabbit2
 
 item4 = Item.create(title: "ensemble tailleur imprimé vert Reiko",
-size: "38", item_type: "mv", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
+size: "38", item_type: "pj", color: "vert", price: 45, description: "Ensemble tailleur imprimé vert : Veste Blair et pantalon Lizzy Reiko
 Veste col chemisier et fausse poche passepoilées. Deux boutons à la fin de chaque manche et fermeture sur le devant par un bouton bleu
 Pantalon droit imprimé avec deux fausses poches passepoilées à l'arrière et passants à la taille pour y glisser une ceinture. Fermeture sur le devant à zip bleu et crochet argenté
 Occasions conseillées : Travail, Mariage, Cérémonie Couleur : vert",
@@ -194,28 +194,28 @@ item5.user = user1
 item5.save
 
 item6 = Item.create(title: "Pochette noire Yves St Laurent",
-size: "Unique", item_type: "Sacs & Accessoires", color: "Noire", price: 35, description: "Pochette noire en cuir reliefé monogramme Yves Saint Laurent. Une anse amovible sur le côté et une grande pochette plate intérieure. fermeture par un zip doré
+size: "Unique", item_type: "sa", color: "Noire", price: 35, description: "Pochette noire en cuir reliefé monogramme Yves Saint Laurent. Une anse amovible sur le côté et une grande pochette plate intérieure. fermeture par un zip doré
 Occasions conseillées : Luxe, Cocktail, Gala, Mariage, Cérémonie, Bal Couleur : noir", brand: "Yves St Laurent", occasion: "Chic")
 item6.user = user2
 item6.save
 
 item7 = Item.create(title: "Peigne avec pétales roses Maison Guillemette",
-size: "Unique", item_type: "Sacs & Accessoires", color: "Rose", price: 20, description: "Peigne de pétales roses pâles PORQUEROLLES Maison Guillemette à attacher dans les cheveux. Armature dorée et pétales roses pâles légères
+size: "Unique", item_type: "sa", color: "Rose", price: 20, description: "Peigne de pétales roses pâles PORQUEROLLES Maison Guillemette à attacher dans les cheveux. Armature dorée et pétales roses pâles légères
 Occasions conseillées : Se marier, Mariage, Cérémonie Couleur : rose", brand: "Maison Guillemette", occasion: "Mariage")
 item7.user = user2
 item7.save
 
-item8 = Item.create(title: "Chapeau en paille Maison Eugénie", size: "Unique", item_type: "Sacs & Accessoires", color: "Beige", price: 50, description: "Chapeau en paille et broderies Maison Eugénie bord large recourbé. Un serre-tête permet de tenir le chapeau sur la tête et 4 oiseaux sont brodés sur le bord en paille
+item8 = Item.create(title: "Chapeau en paille Maison Eugénie", size: "Unique", item_type: "sa", color: "Beige", price: 50, description: "Chapeau en paille et broderies Maison Eugénie bord large recourbé. Un serre-tête permet de tenir le chapeau sur la tête et 4 oiseaux sont brodés sur le bord en paille
 Occasions conseillées : Mariage, Cérémonie Couleur : jaune, beige", brand: "Maison Guillemette", occasion: "Mariage")
 item8.user = user3
 item8.save
 
-item9 = Item.create(title: "Manteau blanc Hugo Boss", size: "38", item_type: "Manteaux & Vestes", color: "Blanc", price: 75, description: "Manteau blanc en fausse fourrure Hugo Boss manches longues et longueur midi. Coupe oversize se ferment par un bouton blanc invisible
+item9 = Item.create(title: "Manteau blanc Hugo Boss", size: "38", item_type: "mv", color: "Blanc", price: 75, description: "Manteau blanc en fausse fourrure Hugo Boss manches longues et longueur midi. Coupe oversize se ferment par un bouton blanc invisible
 Occasions conseillées : Gala, Se marier, Bal Couleur : blanc", brand: "Hugo Boss", occasion: "Casual")
 item9.user = user1
 item9.save
 
-item10 = Item.create(title: "Veste en Tweed Sandro", size: "36", item_type: "Manteaux & Vestes", color: "Bleu", price: 35, description: "Veste en tweed multicolore Sandro. Manches longues et encolure ronde de forme tailleur, bords frangés, petits écussons sur le devant de la veste.
+item10 = Item.create(title: "Veste en Tweed Sandro", size: "36", item_type: "mv", color: "Bleu", price: 35, description: "Veste en tweed multicolore Sandro. Manches longues et encolure ronde de forme tailleur, bords frangés, petits écussons sur le devant de la veste.
 Occasions conseillées : Cérémonie Couleur : bleu", brand: "Sandro", occasion: "Casual")
 item10.user = user1
 item10.save
