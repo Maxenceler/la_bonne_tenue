@@ -22,9 +22,10 @@ class BookingsController < ApplicationController
     if @booking.save
     redirect_to bookings_path
      else
+      @booking = Booking.new
+      flash[:alert] = "Item already booked for these dates"
       render 'items/show'
     end
-
   end
 
   def destroy
