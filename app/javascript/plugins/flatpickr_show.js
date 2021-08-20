@@ -6,6 +6,7 @@ const initFlatpickrShow = () => {
     flatpickr("#startdate", {
       altInput: true,
       plugins: [new rangePlugin({ input: "#enddate" })],
+      minDate: "today",
       inline: true
     });
   }
@@ -18,6 +19,7 @@ const initFlatpickrGreyCalendar = () => {
     flatpickr("#startdate", {
       altInput: true,
       plugins: [new rangePlugin({ input: "#enddate" })],
+      minDate: "today",
       inline: true,
       "disable": bookings
     })
